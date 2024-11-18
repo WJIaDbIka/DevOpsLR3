@@ -43,37 +43,37 @@ PATH: /snap/bin/
 ## ----------- ##
 
 configure:2362: looking for aux files: compile missing install-sh
-configure:2375:  trying ./
-configure:2404:   ./compile found
-configure:2404:   ./missing found
-configure:2386:   ./install-sh found
-configure:2533: checking for a BSD-compatible install
-configure:2606: result: /usr/bin/install -c
-configure:2617: checking whether build environment is sane
-configure:2672: result: yes
-configure:2831: checking for a race-free mkdir -p
-configure:2875: result: /usr/bin/mkdir -p
-configure:2882: checking for gawk
-configure:2917: result: no
-configure:2882: checking for mawk
-configure:2903: found /usr/bin/mawk
-configure:2914: result: mawk
-configure:2925: checking whether make sets $(MAKE)
-configure:2948: result: yes
-configure:2978: checking whether make supports nested variables
-configure:2996: result: yes
-configure:3201: checking for g++
-configure:3222: found /usr/bin/g++
-configure:3233: result: g++
-configure:3260: checking for C++ compiler version
-configure:3269: g++ --version >&5
+configure:2375:  trying ./build-aux/
+configure:2404:   ./build-aux/compile found
+configure:2404:   ./build-aux/missing found
+configure:2386:   ./build-aux/install-sh found
+configure:2534: checking for a BSD-compatible install
+configure:2607: result: /usr/bin/install -c
+configure:2618: checking whether build environment is sane
+configure:2673: result: yes
+configure:2832: checking for a race-free mkdir -p
+configure:2876: result: /usr/bin/mkdir -p
+configure:2883: checking for gawk
+configure:2918: result: no
+configure:2883: checking for mawk
+configure:2904: found /usr/bin/mawk
+configure:2915: result: mawk
+configure:2926: checking whether make sets $(MAKE)
+configure:2949: result: yes
+configure:2979: checking whether make supports nested variables
+configure:2997: result: yes
+configure:3202: checking for g++
+configure:3223: found /usr/bin/g++
+configure:3234: result: g++
+configure:3261: checking for C++ compiler version
+configure:3270: g++ --version >&5
 g++ (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:3280: $? = 0
-configure:3269: g++ -v >&5
+configure:3281: $? = 0
+configure:3270: g++ -v >&5
 Using built-in specs.
 COLLECT_GCC=g++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
@@ -85,47 +85,47 @@ Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
 ... rest of stderr output deleted ...
-configure:3280: $? = 0
-configure:3269: g++ -V >&5
+configure:3281: $? = 0
+configure:3270: g++ -V >&5
 g++: error: unrecognized command-line option '-V'
 g++: fatal error: no input files
 compilation terminated.
-configure:3280: $? = 1
-configure:3269: g++ -qversion >&5
+configure:3281: $? = 1
+configure:3270: g++ -qversion >&5
 g++: error: unrecognized command-line option '-qversion'; did you mean '--version'?
 g++: fatal error: no input files
 compilation terminated.
-configure:3280: $? = 1
-configure:3300: checking whether the C++ compiler works
-configure:3322: g++    conftest.cpp  >&5
-configure:3326: $? = 0
-configure:3376: result: yes
-configure:3379: checking for C++ compiler default output file name
-configure:3381: result: a.out
-configure:3387: checking for suffix of executables
-configure:3394: g++ -o conftest    conftest.cpp  >&5
-configure:3398: $? = 0
-configure:3421: result: 
-configure:3443: checking whether we are cross compiling
-configure:3451: g++ -o conftest    conftest.cpp  >&5
-configure:3455: $? = 0
-configure:3462: ./conftest
-configure:3466: $? = 0
-configure:3481: result: no
-configure:3486: checking for suffix of object files
-configure:3509: g++ -c   conftest.cpp >&5
-configure:3513: $? = 0
-configure:3535: result: o
-configure:3539: checking whether the compiler supports GNU C++
-configure:3559: g++ -c   conftest.cpp >&5
-configure:3559: $? = 0
-configure:3569: result: yes
-configure:3580: checking whether g++ accepts -g
-configure:3601: g++ -c -g  conftest.cpp >&5
-configure:3601: $? = 0
-configure:3645: result: yes
-configure:3665: checking for g++ option to enable C++11 features
-configure:3680: g++  -c -g -O2  conftest.cpp >&5
+configure:3281: $? = 1
+configure:3301: checking whether the C++ compiler works
+configure:3323: g++    conftest.cpp  >&5
+configure:3327: $? = 0
+configure:3377: result: yes
+configure:3380: checking for C++ compiler default output file name
+configure:3382: result: a.out
+configure:3388: checking for suffix of executables
+configure:3395: g++ -o conftest    conftest.cpp  >&5
+configure:3399: $? = 0
+configure:3422: result: 
+configure:3444: checking whether we are cross compiling
+configure:3452: g++ -o conftest    conftest.cpp  >&5
+configure:3456: $? = 0
+configure:3463: ./conftest
+configure:3467: $? = 0
+configure:3482: result: no
+configure:3487: checking for suffix of object files
+configure:3510: g++ -c   conftest.cpp >&5
+configure:3514: $? = 0
+configure:3536: result: o
+configure:3540: checking whether the compiler supports GNU C++
+configure:3560: g++ -c   conftest.cpp >&5
+configure:3560: $? = 0
+configure:3570: result: yes
+configure:3581: checking whether g++ accepts -g
+configure:3602: g++ -c -g  conftest.cpp >&5
+configure:3602: $? = 0
+configure:3646: result: yes
+configure:3666: checking for g++ option to enable C++11 features
+configure:3681: g++  -c -g -O2  conftest.cpp >&5
 conftest.cpp: In function 'int main(int, char**)':
 conftest.cpp:177:25: warning: empty parentheses were disambiguated as a function declaration [-Wvexing-parse]
   177 |   cxx11test::delegate d2();
@@ -135,27 +135,27 @@ conftest.cpp:177:25: note: remove parentheses to default-initialize a variable
       |                         ^~
       |                         --
 conftest.cpp:177:25: note: or replace parentheses with braces to value-initialize a variable
-configure:3680: $? = 0
-configure:3698: result: none needed
-configure:3765: checking whether make supports the include directive
-configure:3780: make -f confmf.GNU && cat confinc.out
+configure:3681: $? = 0
+configure:3699: result: none needed
+configure:3766: checking whether make supports the include directive
+configure:3781: make -f confmf.GNU && cat confinc.out
 this is the am__doit target
-configure:3783: $? = 0
-configure:3802: result: yes (GNU style)
-configure:3828: checking dependency style of g++
-configure:3940: result: gcc3
-configure:4017: checking for gcc
-configure:4038: found /usr/bin/gcc
-configure:4049: result: gcc
-configure:4402: checking for C compiler version
-configure:4411: gcc --version >&5
+configure:3784: $? = 0
+configure:3803: result: yes (GNU style)
+configure:3829: checking dependency style of g++
+configure:3941: result: gcc3
+configure:4018: checking for gcc
+configure:4039: found /usr/bin/gcc
+configure:4050: result: gcc
+configure:4403: checking for C compiler version
+configure:4412: gcc --version >&5
 gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-configure:4422: $? = 0
-configure:4411: gcc -v >&5
+configure:4423: $? = 0
+configure:4412: gcc -v >&5
 Using built-in specs.
 COLLECT_GCC=gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
@@ -167,45 +167,45 @@ Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
 ... rest of stderr output deleted ...
-configure:4422: $? = 0
-configure:4411: gcc -V >&5
+configure:4423: $? = 0
+configure:4412: gcc -V >&5
 gcc: error: unrecognized command-line option '-V'
 gcc: fatal error: no input files
 compilation terminated.
-configure:4422: $? = 1
-configure:4411: gcc -qversion >&5
+configure:4423: $? = 1
+configure:4412: gcc -qversion >&5
 gcc: error: unrecognized command-line option '-qversion'; did you mean '--version'?
 gcc: fatal error: no input files
 compilation terminated.
-configure:4422: $? = 1
-configure:4411: gcc -version >&5
+configure:4423: $? = 1
+configure:4412: gcc -version >&5
 gcc: error: unrecognized command-line option '-version'
 gcc: fatal error: no input files
 compilation terminated.
-configure:4422: $? = 1
-configure:4426: checking whether the compiler supports GNU C
-configure:4446: gcc -c   conftest.c >&5
-configure:4446: $? = 0
-configure:4456: result: yes
-configure:4467: checking whether gcc accepts -g
-configure:4488: gcc -c -g  conftest.c >&5
-configure:4488: $? = 0
-configure:4532: result: yes
-configure:4552: checking for gcc option to enable C11 features
-configure:4567: gcc  -c -g -O2  conftest.c >&5
-configure:4567: $? = 0
-configure:4585: result: none needed
-configure:4701: checking whether gcc understands -c and -o together
-configure:4724: gcc -c conftest.c -o conftest2.o
-configure:4727: $? = 0
-configure:4724: gcc -c conftest.c -o conftest2.o
-configure:4727: $? = 0
-configure:4739: result: yes
-configure:4758: checking dependency style of gcc
-configure:4870: result: gcc3
-configure:5024: checking that generated files are newer than configure
-configure:5030: result: done
-configure:5057: creating ./config.status
+configure:4423: $? = 1
+configure:4427: checking whether the compiler supports GNU C
+configure:4447: gcc -c   conftest.c >&5
+configure:4447: $? = 0
+configure:4457: result: yes
+configure:4468: checking whether gcc accepts -g
+configure:4489: gcc -c -g  conftest.c >&5
+configure:4489: $? = 0
+configure:4533: result: yes
+configure:4553: checking for gcc option to enable C11 features
+configure:4568: gcc  -c -g -O2  conftest.c >&5
+configure:4568: $? = 0
+configure:4586: result: none needed
+configure:4702: checking whether gcc understands -c and -o together
+configure:4725: gcc -c conftest.c -o conftest2.o
+configure:4728: $? = 0
+configure:4725: gcc -c conftest.c -o conftest2.o
+configure:4728: $? = 0
+configure:4740: result: yes
+configure:4759: checking dependency style of gcc
+configure:4871: result: gcc3
+configure:5025: checking that generated files are newer than configure
+configure:5031: result: done
+configure:5058: creating ./config.status
 
 ## ---------------------- ##
 ## Running config.status. ##
@@ -225,6 +225,7 @@ on UBUNTU
 config.status:775: creating Makefile
 config.status:947: executing depfiles commands
 config.status:1024: cd .       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+make: Nothing to be done for 'am--depfiles'.
 config.status:1029: $? = 0
 
 ## ---------------- ##
@@ -278,7 +279,7 @@ am_cv_prog_cc_c_o=yes
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} '\''/home/dmitry_borko/LR3/missing'\'' aclocal-1.16'
+ACLOCAL='${SHELL} '\''/home/dmitry_borko/LR3/build-aux/missing'\'' aclocal-1.16'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -287,9 +288,9 @@ AM_BACKSLASH='\'
 AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
 AM_DEFAULT_VERBOSITY='1'
 AM_V='$(V)'
-AUTOCONF='${SHELL} '\''/home/dmitry_borko/LR3/missing'\'' autoconf'
-AUTOHEADER='${SHELL} '\''/home/dmitry_borko/LR3/missing'\'' autoheader'
-AUTOMAKE='${SHELL} '\''/home/dmitry_borko/LR3/missing'\'' automake-1.16'
+AUTOCONF='${SHELL} '\''/home/dmitry_borko/LR3/build-aux/missing'\'' autoconf'
+AUTOHEADER='${SHELL} '\''/home/dmitry_borko/LR3/build-aux/missing'\'' autoheader'
+AUTOMAKE='${SHELL} '\''/home/dmitry_borko/LR3/build-aux/missing'\'' automake-1.16'
 AWK='mawk'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
@@ -316,7 +317,7 @@ LDFLAGS=''
 LIBOBJS=''
 LIBS=''
 LTLIBOBJS=''
-MAKEINFO='${SHELL} '\''/home/dmitry_borko/LR3/missing'\'' makeinfo'
+MAKEINFO='${SHELL} '\''/home/dmitry_borko/LR3/build-aux/missing'\'' makeinfo'
 MKDIR_P='/usr/bin/mkdir -p'
 OBJEXT='o'
 PACKAGE='funca'
@@ -357,7 +358,7 @@ host_alias=''
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/dmitry_borko/LR3/install-sh'
+install_sh='${SHELL} /home/dmitry_borko/LR3/build-aux/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'
