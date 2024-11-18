@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "branchAutoPackage" ]
+  pull_request:
+    branches: [ "branchAutoPackage" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4   
+    - name: Install automake
+      run: sudo apt-get install automake autoconf
+    - name: Generate configuration files
+      run: autoreconf -i
+    - name: Build project
+      run: ./configure && make
+    - name: Create package
+      run: make deb
