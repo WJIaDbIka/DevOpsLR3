@@ -1,0 +1,5 @@
+Package: funca
+Version: 0.1
+Architecture: all
+Maintainer: a@yahoo.com
+Description:the program calculates the sum of n elements in the series
