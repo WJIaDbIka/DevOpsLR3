@@ -3,7 +3,8 @@
 int CreateHTTPserver();
 
 int main() {
-    CreateHTTPserver();
+    FuncA Func;
+    Func.testServerSimulation();
     return 0; // Завершення програми
 }
 
