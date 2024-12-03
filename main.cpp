@@ -4,7 +4,8 @@ int CreateHTTPserver();
 
 int main() {
     FuncA Func;
-    Func.testServerSimulation();
+    CreateHTTPserver();
+    //Func.testServerSimulation();
     return 0; // Завершення програми
 }
 
