@@ -2,22 +2,43 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ "branchHTTPserver" ]
+    branches:
+      - branchHTTPserver
   pull_request:
-    branches: [ "branchHTTPserver" ]
+    branches:
+      - branchHTTPserver
 
 jobs:
   build:
+    name: Build and Push Multi-Arch Docker Image
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Configure
-      run: ./configure  
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+        with:
+          platforms: all
 
-    - name: Build
-      run: make  
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+        with:
+          driver: docker-container
+          driver-opts: image=moby/buildkit:latest
 
-    - name: Run tests
-      run: ./funcA
+      - name: Log in to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_NAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Build and push multi-arch image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: dmytro392/optimafuncanew:latest
