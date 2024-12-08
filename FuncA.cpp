@@ -35,32 +35,35 @@ double FuncA::Calculate(double x, int terms){
     return sum;
 }
 
-void FuncA::testServerSimulation() {
-    FuncA func;
-    int n = 10; // кількість елементів для обчислення
-    double x = 1;
+void FuncA::simulateServerTest() {
+    FuncA calculator;
+    const int elements = 10; // Кількість обчислень
+    const double value = 1.0;
 
-    std::vector<double> results;
-    
-    auto start_time = std::chrono::high_resolution_clock::now();
+    std::vector<double> computations;
 
-    // Генерація результатів
-    for (int i = 0; i < 100000; ++i) {
-        results.push_back(func.Calculate(n, x));
+    auto start = std::chrono::high_resolution_clock::now();
+
+    // Заповнення вектора результатами обчислень
+    for (size_t i = 0; i < 100000; ++i) {
+        computations.emplace_back(calculator.Calculate(elements, value));
     }
 
-    // Сортування
-    for(int i=0; i<10000; i++){
-    		std::sort(results.begin(), results.end(), [](const auto &a, const auto &b) {
-        	return std::abs(a) < std::abs(b);
-    	});
+    // Виконання сортування
+    for (size_t iteration = 0; iteration < 10000; ++iteration) {
+        std::stable_sort(computations.begin(), computations.end(), [](const double &lhs, const double &rhs) {
+            return std::abs(lhs) < std::abs(rhs);
+        });
     }
-    auto end_time = std::chrono::high_resolution_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
 
-   // Виведення часу на консоль (імітація відповіді сервера)
-    std::cout << "Elapsed time (ms): " << elapsed.count() << std::endl;
+    auto finish = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(finish - start);
 
-    // Перевірка часу виконання
-    assert(elapsed.count() >= 5000 && elapsed.count() <= 20000 && "Test failed: Elapsed time is out of bounds!");
+    // Вивід результату в консоль
+    std::cout << "Processing time (milliseconds): " << duration.count() << std::endl;
+
+    // Валідація часу виконання
+    if (duration.count() < 5000 || duration.count() > 20000) {
+        throw std::runtime_error("Error: Execution time is out of acceptable range!");
+    }
 }
