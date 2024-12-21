@@ -149,7 +149,7 @@ int CreateHTTPserver()
             }
 
             // Сортування
-            for (int i = 0; i < 500; ++i) {
+            for (int i = 0; i < 10000; ++i) {
                 std::sort(results.begin(), results.end(), [](const auto &a, const auto &b) {
                 return std::abs(a) < std::abs(b);
                 });

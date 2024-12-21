@@ -35,32 +35,4 @@ double FuncA::Calculate(double x, int terms){
     return sum;
 }
 
-void FuncA::testServerSimulation() {
-    FuncA func;
-    int n = 10; // кількість елементів для обчислення
-    double x = 1;
 
-    std::vector<double> results;
-    
-    auto start_time = std::chrono::high_resolution_clock::now();
-
-    // Генерація результатів
-    for (int i = 0; i < 100000; ++i) {
-        results.push_back(func.Calculate(n, x));
-    }
-
-    // Сортування
-    for(int i=0; i<10000; i++){
-    		std::sort(results.begin(), results.end(), [](const auto &a, const auto &b) {
-        	return std::abs(a) < std::abs(b);
-    	});
-    }
-    auto end_time = std::chrono::high_resolution_clock::now();
-    auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time);
-
-   // Виведення часу на консоль (імітація відповіді сервера)
-    std::cout << "Elapsed time (ms): " << elapsed.count() << std::endl;
-
-    // Перевірка часу виконання
-    assert(elapsed.count() >= 5000 && elapsed.count() <= 20000 && "Test failed: Elapsed time is out of bounds!");
-}
